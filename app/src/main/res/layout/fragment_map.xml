@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapFragment"
+    android:id="@+id/map_fragment">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapActivity"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/person_button"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/iconMap"
+            android:layout_width="50dp"
+            android:layout_height="107dp"
+            android:layout_gravity="bottom|left"
+            android:background="@color/white"
+            tools:ignore="RtlHardcoded" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="107dp"
+            android:layout_gravity="bottom|center"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/map_intro"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/event"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
